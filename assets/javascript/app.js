@@ -86,7 +86,7 @@ var trivia = {
     scorer: function() {
         var userguess = $(this).data("name");
         trivia.stop();
-        if (userguess === trivia.questions["q" + trivia.writeq].a) {
+        if (userguess == trivia.questions["q" + trivia.writeq].a) {
             console.log("YEE");
             trivia.correct++;
             trivia.buffer();
