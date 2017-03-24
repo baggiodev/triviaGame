@@ -104,13 +104,13 @@ var trivia = {
         if (trivia.writeq <= (trivia.oblength())) {
             setTimeout(trivia.start, 1000 * 3);
         } else {
-            trivia.endgame();
+            setTimeout(trivia.endgame, 1000 *3);
         }
     },
     endgame: function() {
         $("#title").html("<img id=endgamepic src='assets/images/thanks.jpg'>");
         $("#time").empty();
-        $("#mainContent").html("<br><p>Answer: " + trivia.questions["q" + (trivia.writeq - 1)].a + "</p><p>Total Scores!</p><p>Correct: " + trivia.correct + "</p><p>Incorrect: " + trivia.incorrect + "</p><p>Unanswered: " + trivia.unanswered + "</p>");
+        $("#mainContent").html("<br><p>Total Scores!</p><p>Correct: " + trivia.correct + "</p><p>Incorrect: " + trivia.incorrect + "</p><p>Unanswered: " + trivia.unanswered + "</p>");
     }
 };
 window.onload = function() {
